@@ -1,0 +1,7 @@
+{
+  "name": "prograhibridaunidadii",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
