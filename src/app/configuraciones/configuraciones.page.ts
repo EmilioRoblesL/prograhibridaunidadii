@@ -22,8 +22,7 @@ export class ConfiguracionesPage implements OnInit {
     this.eliminarRegistrosCitas = this.configuracionService.eliminarRegistros()
   }
 
-  onCambioEnEliminacionCita($event: IonToggleCustomEvent<ToggleChangeEventDetail<any>>) {
-    //const ordenar = $event.detail.checked        
+  onCambioEnEliminacionCita($event: IonToggleCustomEvent<ToggleChangeEventDetail<any>>) {   
     this.configuracionService.setEliminarRegistros(this.eliminarRegistrosCitas)
   }
 }
