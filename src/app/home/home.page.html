@@ -1,20 +1,34 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+       Citas 
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink] = "['/configuraciones']">
+        <ion-icon icon="settings-outline" slot="icon-only" />
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <div class="random-quote-container" *ngIf="citaAleatoria; else loading" vertical="middle"></div>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="quote-text" vertical="middle">{{ citaAleatoria.texto }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p class="quote-author" vertical="middle">{{ citaAleatoria.autor }}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-card>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+  <ng-template #loading>
+    <p>Cargando...</p>
+  </ng-template>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button [routerLink]="['/citas']">
+      <ion-icon name="add-circle-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
