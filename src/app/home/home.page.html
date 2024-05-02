@@ -5,7 +5,7 @@
     </ion-title>
     <ion-buttons slot="end">
       <ion-button [routerLink] = "['/configuraciones']">
-        <ion-icon icon="settings-outline" slot="icon-only" />
+        <ion-icon icon="settings-outline" slot="icon-only"/>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -16,10 +16,10 @@
     <div class="random-quote-container" *ngIf="citaAleatoria; else loading" vertical="middle"></div>
     <ion-card>
       <ion-card-header>
-        <ion-card-title class="quote-text" vertical="middle">{{ citaAleatoria.texto }}</ion-card-title>
+        <h3 class="quote-text" vertical="middle">{{ citaAleatoria.texto }}</h3>
       </ion-card-header>
       <ion-card-content>
-        <p class="quote-author" vertical="middle">{{ citaAleatoria.autor }}</p>
+        <p class="quote-author" vertical="middle">{{ citaAleatoria.autor}}</p>
       </ion-card-content>
     </ion-card>
   </ion-card>

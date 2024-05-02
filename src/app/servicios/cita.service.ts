@@ -9,7 +9,7 @@ export class CitaService {
   private _citas:Cita[] = [
     new Cita (1, 'El éxito consiste en obtener lo que se desea. La félicidad en disfrutar lo que se obtiene.', 'Ralph Waldo Emerson'),
     new Cita (2, 'Las personas no son recordadas por el número de veces que fracasan, sino por el número de veces que tienen éxito.' , 'Thomas Edison'),
-    new Cita (3, 'Ningún viento es bueno para el barco que no se sabe adónde va', 'Séneca'),
+    new Cita (3, 'Ningún viento es bueno para el barco que no se sabe adónde va.', 'Séneca'),
   ]
 
   constructor() {
